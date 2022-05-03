@@ -13,7 +13,7 @@ const forecast = (longitude, latitude, callback) => {
             console.log(body);
             callback(undefined, {
                 location: body.location.name + ', ' + body.location.region + ', ' + body.location.country,
-                forecast: body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + " degress",
+                forecast: body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + " degress out. It feeels like " + body.current.feelslike + " degrees out. The humidity is " + body.current.humidity + "%." ,
             });
         }
     })
